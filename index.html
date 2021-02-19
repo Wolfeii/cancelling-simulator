@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
+ <meta charset="utf-8">
+ <title>Cancelling Simulator</title>
+ 
+ <meta property="og:title" content="Cancelling Simulator"/>
+ <meta property="og:site_name" content="Cancelling Simulator"/>
+ <meta property="og:description" content="Simple game where you decide if content creators get cancelled."/>
+ 
+</head>
 <body>
+ <div class="container">
+  <div class="heading">
+   <h1 class="title">Cancelling Simulator</h1>
+  </div>
+ <p class="game-intro">Cancel your favorite content creators <strong>and watch them burn</strong></p>
+ </div>
 
-<h1>Cancelling Simulator</h1>
-
-<button type="button" onclick="alert('Not Cancel!')">Not Cancel</button>
-<button type="button" onclick="alert('Cancel!')">Cancel</button>	
-<img src="images/image0.png" width="305" height="312" id="myPicture" alt="some image">
- 
-<script>
- window.onload = choosePic;
- 
- var myPix = new Array("tweets/image0.png");
- 
- function choosePic() {
-  var randomNum = Math.floor(Math.random() * myPix.length);
-  document.getElementById("myPicture").src = myPix[randomNum];
- }
-</script>
- 
+ <script src="js/game_manager.js"></script>
 </body>
 </html>
