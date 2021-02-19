@@ -6,6 +6,18 @@
 
 <button type="button" onclick="alert('Hello world!')">Not Cancel</button>
 <button type="button" onclick="alert('Hello world!')">Cancel</button>	
+<img src="images/spacer.gif" width="305" height="312" id="myPicture" alt="some image">
+ 
+<script>
+ window.onload = choosePic;
+ 
+ var myPix = new Array("images/image0.png");
+ 
+ function choosePic() {
+  var randomNum = Math.floor(Math.random() * myPix.length);
+  document.getElementById("myPicture").src = myPix[randomNum];
+ }
+</script>
  
 </body>
 </html>
