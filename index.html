@@ -15,9 +15,21 @@
    <h1 class="title">Cancelling Simulator</h1>
   </div>
  <p class="game-intro">Cancel your favorite content creators <strong>and watch them burn</strong></p>
- <img src="tweets/" + getRandomTweet() alt="twet">
+ document.write(getImageTag());
  </div>
 
- <script> src="js/tweetManager.js" </script>
+ <script>
+  var imageURLs = [
+       "tweets/image0.png"
+     , "tweets/image1.png"
+  ];
+  function getImageTag() {
+    var img = '<img src=\"';
+    var randomIndex = Math.floor(Math.random() * imageURLs.length);
+    img += imageURLs[randomIndex];
+    img += '\" alt=\"twet\"/>';
+    return img;
+  }
+ </script>
 </body>
 </html>
