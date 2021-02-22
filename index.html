@@ -15,16 +15,20 @@
    <h1 class="title">Cancelling Simulator</h1>
   </div>
  <p class="game-intro">Cancel your favorite content creators <strong>and watch them burn</strong></p>
- <button type="button">Cancel</button>
- <button id="but" type="button">Not Cancel</button>
+ <img src="images/spacer.gif" width="305" height="312" id="img" alt="some image">
+ <button type="button" onclick="document.write(setRandomTweet())">Cancel</button>
+ <button id="but" type="button" onclick="document.write(setRandomTweet())">Not Cancel</button>
  </div>
 
 
  <script>
-  var but = document.getElementById('but');
-but.addEventListener("click", function() {
-    this.src = imageURLs[Math.floor(Math.random() * imageUrls.length)];
-});
+  window.onload = setRandomTweet;
+
+ 
+  function setRandomTweet() {
+    var randomNum = Math.floor(Math.random() * imageURLs.length);
+    document.getElementById("img").src = imageURLs[randomNum];
+  }
  
   var imageURLs = [
        "tweets/image0.png"
@@ -40,9 +44,5 @@ but.addEventListener("click", function() {
     return img;
   }
  </script>
- 
- <script type="text/javascript">
-  document.write(getImageTag());
-</script>
 </body>
 </html>
