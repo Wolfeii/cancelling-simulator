@@ -15,11 +15,17 @@
    <h1 class="title">Cancelling Simulator</h1>
   </div>
  <p class="game-intro">Cancel your favorite content creators <strong>and watch them burn</strong></p>
- <button type="button" onclick="document.write(getImageTag())">Cancel</button>
- <button type="button" onclick="document.write(getImageTag())">Not Cancel</button>
+ <button type="button">Cancel</button>
+ <button id="but" type="button">Not Cancel</button>
  </div>
 
+
  <script>
+  var but = document.getElementById('but');
+but.addEventListener("click", function() {
+    this.src = imageURLs[Math.floor(Math.random() * imageUrls.length)];
+});
+ 
   var imageURLs = [
        "tweets/image0.png"
      , "tweets/image1.png"
