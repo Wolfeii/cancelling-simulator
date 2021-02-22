@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+ 
+ <style>
+ .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  
+}
+  
+  .button1 {background-color: #f44336;} /* Red */ 
+
+</style>
  <meta charset="utf-8">
  <title>Cancelling Simulator</title>
  
@@ -15,8 +34,8 @@
    <h1 class="title">Cancelling Simulator</h1>
   </div>
  <p class="game-intro">Cancel your favorite content creators <strong>and watch them burn</strong></p>
-  <button type="button" onclick="changeImageToRandomImage()">Cancel</button>
- <button id="but" type="button" onclick="changeImageToRandomImage()">Not Cancel</button>
+  <button class="button button1" onclick="changeImageToRandomImage()">Cancel</button>
+ <button class="button" onclick="changeImageToRandomImage()">Not Cancel</button>
  <img onclick="changeImageToRandomImage()" id="image" src="tweets/image0.png" width="600" height="200">
  </div>
 
