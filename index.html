@@ -15,9 +15,13 @@
    <h1 class="title">Cancelling Simulator</h1>
   </div>
  <p class="game-intro">Cancel your favorite content creators <strong>and watch them burn</strong></p>
- <img src="tweets/image0.png" alt="tweet">
+ <img src="tweets/image" + getRandomTweet() + ".png" alt="tweet">
  </div>
 
- <script src="js/game_manager.js"></script>
+ <script 
+    function getRandomTweet() {
+         return Math.floor(Math.random() * 10);
+    }
+ </script>
 </body>
 </html>
