@@ -15,34 +15,30 @@
    <h1 class="title">Cancelling Simulator</h1>
   </div>
  <p class="game-intro">Cancel your favorite content creators <strong>and watch them burn</strong></p>
- <img src="images/spacer.gif" width="305" height="312" id="img" alt="some image">
- <button type="button" onclick="document.write(setRandomTweet())">Cancel</button>
- <button id="but" type="button" onclick="document.write(setRandomTweet())">Not Cancel</button>
+ <img onclick="changeImageToRandomImage()" id="image" src="tweets/image0.png">
+ <button type="button" onclick="changeImageToRandomImage()">Cancel</button>
+ <button id="but" type="button" onclick="changeImageToRandomImage()">Not Cancel</button>
  </div>
 
 
  <script>
-  window.onload = setRandomTweet;
+  window.onload = changeImageToRandomImage;
 
  
-  function setRandomTweet() {
-    var randomNum = Math.floor(Math.random() * imageURLs.length);
-    document.getElementById("img").src = imageURLs[randomNum];
+  function changeImageToRandomImage() {
+   images = ['tweets/image0.png', 'tweets/image1.png','tweets/image2.png','tweets/image3.png'];
+
+   var random = images[Math.floor(Math.random()*images.length)];
+   document.getElementById('image').src= random;
+
   }
- 
+
   var imageURLs = [
        "tweets/image0.png"
      , "tweets/image1.png"
      , "tweets/image2.png"
      , "tweets/image3.png"
   ];
-  function getImageTag() {
-    var img = '<img src=\"';
-    var randomIndex = Math.floor(Math.random() * imageURLs.length);
-    img += imageURLs[randomIndex];
-    img += '\" alt=\"twet\"/>';
-    return img;
-  }
  </script>
 </body>
 </html>
